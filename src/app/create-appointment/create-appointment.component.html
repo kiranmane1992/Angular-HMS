@@ -1,0 +1,26 @@
+<div class="container">
+    <h2 class="text-center"> Add new appointment</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label >Name</label>
+            <input type="text" id="name" class="form-control" name="name" placeholder="Enter name" [(ngModel)]="appointment.name">
+        </div>
+
+        <div class="form-group">
+            <label >Age</label>
+            <input type="text" id="age" class="form-control" name="age" placeholder="Enter name" [(ngModel)]="appointment.age">
+        </div>
+        <div class="form-group">
+            <label >symtoms</label>
+            <input type="text" id="symtoms" class="form-control" name="symtoms" placeholder="Enter name" [(ngModel)]="appointment.symtoms">
+        </div>
+        <div class="form-group">
+            <label >Number</label>
+            <input type="text" id="number" class="form-control" name="number" placeholder="Enter name" [(ngModel)]="appointment.number">
+        </div>
+
+        <button type="submit" class="btn-outline-success">Submit</button>
+
+    </form>
+</div>

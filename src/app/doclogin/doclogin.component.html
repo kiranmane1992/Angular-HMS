@@ -1,0 +1,28 @@
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+    <a href="index.html" class="navbar-brand p-0">
+        <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>DentCare</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+       
+       </div>
+</nav>
+<div class="container">
+    <form >
+      <h2 class="mb-3">Login</h2>
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required [(ngModel)]="username">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required [(ngModel)]="password">
+      </div>
+      <button  (click)="checklogin()" type="button"  class="btn btn-primary">Login</button>
+      <button  style="margin: 10px;" type="button" routerLink="/home" class="btn btn-primary">Cancel</button>
+    </form>
+  </div>
+  

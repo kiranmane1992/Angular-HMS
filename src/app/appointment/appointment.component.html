@@ -1,0 +1,59 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="">Maa Hopsital</a>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+            <a class="nav-link" href="#" routerLink="/create-appointment">Create Appoitment <span class="sr-only">(current)</span></a>
+          </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" routerLink="/admin">Back <span class="sr-only">(current)</span></a>
+        </li>
+    
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+<div class="container">
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>symtoms</th>
+                    <th>Number</th>
+                    <th>Action</th>
+    
+                </tr>
+    
+            </thead>
+            <tbody>
+                <tr *ngFor="let appointment of appointments">
+                    <td>{{appointment.id}}</td>
+                    <td>{{appointment.name}}</td>
+                    <td>{{appointment.age}}</td>
+                    <td>{{appointment.symtoms}}</td>
+                    <td>{{appointment.number}}</td>
+                    <td>
+                        <button (click)="delete(appointment.id)" class="btn btn-danger">Delete</button>
+                    </td>
+    
+    
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+            
+
+   
